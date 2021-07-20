@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
+  <vendor>lowRISC</vendor>
+  <name>Ibex</name>
+
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <size>32</size>
+  <access>read-write</access>
+  <resetValue>0x00000000</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+  
+  <peripherals>
+    <peripheral>
+      <name>GPIO0</name>
+      <version>1.0</version>
+      <description>GPIO</description>
+      <groupName>TIMER</groupName>
+      <baseAddress>0x80000000</baseAddress>
+      <size>32</size>
+      <access>read-write</access>
+
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x100</size>
+        <usage>registers</usage>
+      </addressBlock>
+
+      <registers>
+
+        <register>
+            <name>OUT</name>
+            <displayName>OUT</displayName>
+            <description>GPIO port output type register</description>
+            <addressOffset>0x0</addressOffset>
+            <size>32</size>
+            <access>read-write</access>
+            <resetValue>0x00000000</resetValue>
+            <fields>
+            <field>
+                <name>LED0</name>
+                <description>PL LED 0</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            ...
+            </fields>
+        </register>
+
+
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>
+
